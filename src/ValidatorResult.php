@@ -14,7 +14,7 @@ namespace Harmony\Validator;
  *
  * @author David Negrier
  */
-class ValidatorResult extends \Exception {
+class ValidatorResult {
 
 	const SUCCESS = "ok";
 	const WARN = "warn";
