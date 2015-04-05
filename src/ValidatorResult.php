@@ -14,7 +14,7 @@ namespace Harmony\Validator;
  *
  * @author David Negrier
  */
-class ValidatorResult {
+class ValidatorResult implements \JsonSerializable {
 
 	const SUCCESS = "ok";
 	const WARN = "warn";
