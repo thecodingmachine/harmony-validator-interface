@@ -44,6 +44,35 @@ class ValidatorResult {
 		}
 	}
 
+	/**
+	 * Returns the status of the validation. One of ValidatorResult::SUCCESS, ValidatorResult::WARN or ValidatorResult::ERROR
+	 * @return string
+	 */
+	public function getCode()
+	{
+		return $this->code;
+	}
+
+	/**
+	 * The validation message (in HTML)
+	 * @return string
+	 */
+	public function getHtmlMessage()
+	{
+		return $this->htmlMessage;
+	}
+
+	/**
+	 * The validation message (in text, for the CLI version)
+	 * @return string
+	 */
+	public function getTextMessage()
+	{
+		return $this->textMessage;
+	}
+
+
+
 	public function jsonSerialize() {
 		return array(
 			"code"=>$this->code,
