@@ -10,22 +10,25 @@
 namespace Harmony\Validator;
 
 /**
- * All classes implementing this interface will generate validators on the Harmony front page.
+ * All instances implementing this interface will generate validators on the Harmony front page.
+ * For a result to be displayed, an instance (or many instances) of this class must be declared
+ * in the DI container of your application and Harmony must be connected to your app's container
+ * using the 'modules.php' file.
  *
- * There can be one or many validators per class depending on the return type of the
+ * There can be one or many validators per instance depending on the return type of the
  * `validateClass` method.
  *
  * @author David Negrier
  */
-interface StaticValidatorInterface
+interface ValidatorInterface
 {
 
     /**
-     * Runs the validation of the class.
+     * Runs the validation of the instance.
      * Returns a ValidatorResult object explaining the result, or an array
      * of ValidatorResult objects.
      *
      * @return ValidatorResult|ValidatorResult[]
      */
-    public static function validateClass();
+    public function validateInstance();
 }
