@@ -25,7 +25,7 @@ interface StaticValidatorInterface
      * Returns a ValidatorResult object explaining the result, or an array
      * of ValidatorResult objects.
      *
-     * @return ValidatorResult|ValidatorResult[]
+     * @return ValidatorResultInterface|ValidatorResultInterface[]
      */
     public static function validateClass();
 }

@@ -28,7 +28,8 @@ interface ValidatorInterface
      * Returns a ValidatorResult object explaining the result, or an array
      * of ValidatorResult objects.
      *
-     * @return ValidatorResult|ValidatorResult[]
+     * @param string $identifier The identifier of the instance in the container
+     * @return ValidatorResultInterface|ValidatorResultInterface[]
      */
-    public function validateInstance();
+    public function validateInstance($identifier);
 }
