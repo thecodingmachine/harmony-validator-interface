@@ -22,10 +22,10 @@ interface StaticValidatorInterface
 
     /**
      * Runs the validation of the class.
-     * Returns a MoufValidatorResult object explaining the result, or an array
-     * of MoufValidatorResult objects.
+     * Returns a ValidatorResult object explaining the result, or an array
+     * of ValidatorResult objects.
      *
-     * @return ValidatorResult|ValidatorResult[]
+     * @return ValidatorResultInterface|ValidatorResultInterface[]
      */
     public static function validateClass();
 }
